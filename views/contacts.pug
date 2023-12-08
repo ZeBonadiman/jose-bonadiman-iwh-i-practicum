@@ -1,0 +1,23 @@
+doctype html
+html
+  head
+    title Página Inicial
+    meta(name="viewport" content="width=device-width, initial-scale=1")
+    link(rel="stylesheet", href="/css/style.css")
+  body
+    h1 Animais
+  
+    table
+      thead
+        tr
+          th Nome
+          th Idade
+          th Raça
+      tbody
+        each contact in data
+          tr
+            td #{contact.nome}
+            td #{contact.idade}
+            td #{contact.raca}
+
+    a(href="/update-cobj") Adicionar a esta tabela

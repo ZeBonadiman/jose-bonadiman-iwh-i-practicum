@@ -1,0 +1,30 @@
+doctype html
+html
+  head
+    title Atualizar Registro
+    meta(name="viewport", content="width=device-width, initial-scale=1")
+    link(rel="stylesheet", href="/css/style.css")
+  body
+    h1 Atualizar Registro
+
+    form(action="/update-cobj", method="post")
+      label(for="nome") Novo Nome:
+      input(type="text", name="nome", required)
+      label(for="idade") Nova Idade:
+      input(type="text", name="idade", required)
+      label(for="raca") Nova Raça:
+      input(type="text", name="raca", required)
+      button(type="submit") Atualizar Registro
+
+    table
+      thead
+        tr
+          th Nome
+          th Idade
+          th Raça
+      tbody
+        each contact in data
+          tr
+            td #{contact.nome}
+            td #{contact.idade}
+            td #{contact.raca}
