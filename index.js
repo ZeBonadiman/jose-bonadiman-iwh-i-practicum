@@ -9,7 +9,7 @@ app.use(express.static(__dirname + '/public'));
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
-const private_app_token = 'pat-na1-1770bfef-eb81-42b7-8a24-d3d70061cb97';
+const private_app_token = '';
 
 app.get('/animais', async (req, res) => {
     const Animais = "https://api.hubapi.com/crm/v3/objects/2-21296903/?properties=nome&properties=idade&properties=raca";
